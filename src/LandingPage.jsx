@@ -1,6 +1,6 @@
 import heroImage from "./assets/Screenshot 2024-01-12 at 10.52 1.png";
 
-function LandingPage() {
+function LandingPage({ textColor, bgColor, buttonColor, buttonTextColor }) {
   return (
     <div>
       <div className="w-full flex fixed justify-center">
@@ -25,17 +25,27 @@ function LandingPage() {
       <div
         id="body"
         className="w-full flex items-center font-Poppins tracking-wider flex-col"
+        style={{ backgroundColor: bgColor }}
       >
         <div className="xl:w-[1440px] mt-[94px] flex flex-row">
           <div id="hero-text" className="flex flex-col ml-[152px]">
-            <div className="mt-[104px] font-Syncopate font-bold text-5xl max-w-[545px]">
+            <div
+              className="mt-[104px] font-Syncopate font-bold text-5xl max-w-[545px]"
+              style={{ color: textColor }}
+            >
               Become The Architect Of Your Very Own Future
             </div>
-            <div className="mt-2 font-light max-w-[464px] mr-[112px]">
+            <div
+              className="mt-2 font-light max-w-[464px] mr-[112px]"
+              style={{ color: textColor }}
+            >
               Shape your body and your mind to achieve your full potential
               through boxing. Get a free class with the button below.
             </div>
-            <button className="mt-12 py-[14px] bg-ctaBlue flex justify-center rounded-[36px] text-white w-[273px]">
+            <button
+              className="mt-12 py-[14px] bg-ctaBlue flex justify-center rounded-[36px] text-white w-[273px]"
+              style={{ backgroundColor: buttonColor, color: buttonTextColor }}
+            >
               View classes
             </button>
           </div>
@@ -44,10 +54,16 @@ function LandingPage() {
           </div>
         </div>
         <div className="xl:w-[1440px] mt-[80px] flex flex-col items-center">
-          <div className="font-Syncopate font-bold text-headingTwoSize">
+          <div
+            className="font-Syncopate font-bold text-headingTwoSize"
+            style={{ color: textColor }}
+          >
             Become a member or pay per class
           </div>
-          <div className="max-w-[976px] text-center mt-3">
+          <div
+            className="max-w-[976px] text-center mt-3"
+            style={{ color: textColor }}
+          >
             Become a member of Doberman Box Club to attend whichever classes you
             like, whenever you like, gain open access to our gym at any time and
             the freedom to get advice from our coaches not only in classes but

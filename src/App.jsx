@@ -1,11 +1,32 @@
+import React, { useState } from "react";
 import ColorPicker from "./ColorPicker.jsx";
 import LandingPage from "./LandingPage.jsx";
+
 function App() {
+  const [textColor, setTextColor] = useState("#000000");
+  const [bgColor, setBgColor] = useState("#FFFFFF");
+  const [buttonColor, setButtonColor] = useState("#2066DB");
+  const [buttonTextColor, setButtonTextColor] = useState("#FFFFFF");
+
   return (
-    <>
-      <ColorPicker />
-      <LandingPage />
-    </>
+    <div>
+      <ColorPicker
+        textColor={textColor}
+        setTextColor={setTextColor}
+        bgColor={bgColor}
+        setBgColor={setBgColor}
+        buttonColor={buttonColor}
+        setButtonColor={setButtonColor}
+        buttonTextColor={buttonTextColor}
+        setButtonTextColor={setButtonTextColor}
+      />
+      <LandingPage
+        textColor={textColor}
+        bgColor={bgColor}
+        buttonColor={buttonColor}
+        buttonTextColor={buttonTextColor}
+      />
+    </div>
   );
 }
 
