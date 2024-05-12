@@ -7,6 +7,8 @@ function App() {
   const [bgColor, setBgColor] = useState("#FFFFFF");
   const [buttonColor, setButtonColor] = useState("#2066DB");
   const [buttonTextColor, setButtonTextColor] = useState("#FFFFFF");
+  const [bgButtonTextColor, setBgButtonTextColor] = useState("#000000");
+  const [textButtonTextColor, setTextButtonTextColor] = useState("#FFFFFF");
 
   return (
     <div>
@@ -19,6 +21,10 @@ function App() {
         setButtonColor={setButtonColor}
         buttonTextColor={buttonTextColor}
         setButtonTextColor={setButtonTextColor}
+        bgButtonTextColor={bgButtonTextColor}
+        setBgButtonTextColor={setBgButtonTextColor}
+        textButtonTextColor={textButtonTextColor}
+        setTextButtonTextColor={setTextButtonTextColor}
       />
       <LandingPage
         textColor={textColor}
