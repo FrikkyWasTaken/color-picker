@@ -46,46 +46,48 @@ function ColorPicker({
   }
 
   return (
-    <div className="font-arial fixed flex items-center justify-start bottom-8 left-8 right-8 bg-white border-black border-solid border shadow-slate-400 rounded-xl">
-      <label
-        className="font-Poppins my-9 ml-8 py-3 px-5 rounded-xl text-white bg-blend-difference"
-        style={{ backgroundColor: textColor, color: buttonTextColor }}
-      >
-        Text Color
-        <input
-          className="w-10 h-10 rounded-full hidden"
-          type="color"
-          id="buttons"
-          value={textColor}
-          onChange={handleTextColorChange}
-        />
-      </label>
-      <label
-        className="font-Poppins my-9 ml-8 py-3 px-5 rounded-xl text-white bg-blend-difference"
-        style={{ backgroundColor: bgColor, color: bgButtonTextColor }}
-      >
-        Background Color
-        <input
-          className="w-10 h-10 rounded-full hidden"
-          type="color"
-          id="buttons"
-          value={bgColor}
-          onChange={handleBgColorChange}
-        />
-      </label>
-      <label
-        className="font-Poppins my-9 ml-8 py-3 px-5 rounded-xl text-white bg-blend-difference"
-        style={{ backgroundColor: buttonColor, color: textButtonTextColor }}
-      >
-        Button Color
-        <input
-          className="w-10 h-10 rounded-full hidden"
-          type="color"
-          id="buttons"
-          value={buttonColor}
-          onChange={handleButtonColorChange}
-        />
-      </label>
+    <div className="fixed flex justify-center w-full h-16 bottom-3 left-0">
+      <div className="font-arial flex items-center justify-center bg-white border-black border-solid border shadow-slate-400 rounded-xl px-4">
+        <label
+          className="font-Poppins py-3 px-5 rounded-xl shadow-slate-300 shadow-lg"
+          style={{ backgroundColor: textColor, color: textButtonTextColor }}
+        >
+          Text Color
+          <input
+            className="w-10 h-10 rounded-full hidden"
+            type="color"
+            id="buttons"
+            value={textColor}
+            onChange={handleTextColorChange}
+          />
+        </label>
+        <label
+          className="font-Poppins ml-8 py-3 px-5 rounded-xl shadow-slate-300 shadow-lg"
+          style={{ backgroundColor: bgColor, color: bgButtonTextColor }}
+        >
+          Background Color
+          <input
+            className="w-10 h-10 rounded-full hidden"
+            type="color"
+            id="buttons"
+            value={bgColor}
+            onChange={handleBgColorChange}
+          />
+        </label>
+        <label
+          className="font-Poppins ml-8 py-3 px-5 rounded-xl shadow-slate-300 shadow-lg"
+          style={{ backgroundColor: buttonColor, color: buttonTextColor }}
+        >
+          Button Color
+          <input
+            className="w-10 h-10 rounded-full hidden"
+            type="color"
+            id="buttons"
+            value={buttonColor}
+            onChange={handleButtonColorChange}
+          />
+        </label>
+      </div>
     </div>
   );
 }
